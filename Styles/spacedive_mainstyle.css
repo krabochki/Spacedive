@@ -51,9 +51,9 @@ h3 {
 
 
 h2 {
-	text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+	text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 	margin-top: 1rem;
-	transition: all 1s ease-in-out;
+	transition: all 0.7s ease-in-out;
 	font-size: 1.5rem;
 	border: 0.2rem solid white;
 	padding: 0.6rem 0.8rem;
@@ -68,12 +68,12 @@ h2 {
 	border: none;
 	background: none;
 	text-align: center;
-	transition: all 1s ease-in-out;
-	filter: drop-shadow(0 0 3px rgba(255, 255, 255,0.8));
+	transition: all 0.7s ease-in-out;
+	filter: drop-shadow(0 0 5px rgba(255, 255, 255,0.8));
 }
 
 #bigcont button:hover {
-	filter: drop-shadow(0 0 5px rgba(255, 255, 255,1));
+	filter: drop-shadow(0 0 7px rgba(255, 255, 255,1));
 }
 
 h2:hover {
@@ -81,7 +81,7 @@ h2:hover {
 	letter-spacing: 5px;
 	padding: 0.6rem 0.9rem;	background: rgba(0, 0, 0, 0.15);
 
-	text-shadow: 0 0 5px rgba(255, 255, 255,0.8);
+	text-shadow: 0 0 7px rgba(255, 255, 255,1);
 }
 
 #menubutton {
@@ -225,12 +225,12 @@ nav img:hover {
 	  
 	  #rect.is-visible {
 		display: block;
-		animation: fadeInFromNone 0.5s ease-in-out;
+		animation: fadeInFromNone 2s ease-in-out;
 		animation-fill-mode: forwards;
 	  }
 	  
 	  #rect.is-hidden {
-		animation: fadeOutFromBlock 0.5s ease-in-out;
+		animation: fadeOutFromBlock 2s ease-in-out;
 	  }
 
 
@@ -334,8 +334,8 @@ aside {
 	z-index: 100;
 	left:0;
 	backdrop-filter: blur(6px);
-	left:-345px;
-	transition: all 1s ease;
+	left:-305px;
+	transition: all 2s ease;
 	box-shadow: -50px 0px 100px rgba(255, 255, 255, 0.3) inset;
 	font-family: "Lemon Tuesday";
 	text-shadow: 0 0 7px rgb(255 255 255);
