@@ -1,0 +1,663 @@
+:root {
+  --main-text-color: #ffffff;
+}
+
+@font-face {
+  font-family: "Lemon Tuesday";
+  src: url(../Spacedive_files/Lemon_Tuesday.otf) format("otf"),
+    url(../Spacedive_files/Lemon-Tuesday.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--main-text-color);
+  overflow-x: hidden;
+  font-family: "Montserrat";
+  background-image: url("../Spacedive_files/background.png");
+  background-repeat: no-repeat;
+  background-color: #090b0e;
+  background-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: calc(18px + (24 - 18) * ((100vw - 600px) / (1920 - 600)));
+}
+
+button {
+  font-family: "Montserrat";
+}
+
+.body_hide {
+  opacity: 0;
+  transition: 0.9s opacity ease-in-out;
+}
+.body_visible {
+  opacity: 1;
+}
+
+#bigcont {
+  margin: 0;
+}
+#bigcont img {
+  display: block;
+  margin: auto;
+  width: calc(40% + 7rem);
+}
+h2 {
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  margin-top: 1rem;
+  transition: all 1s ease-in-out;
+  font-size: 1.5rem;
+  border: 0.2rem solid white;
+  padding: 0.6rem 0.8rem;
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#bigcont button {
+  margin: 0 auto;
+  display: block;
+  color: white;
+  border: none;
+  background: none;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
+}
+#bigcont button:hover {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+}
+h2:hover {
+  cursor: pointer;
+  letter-spacing: 5px;
+  padding: 0.6rem 0.9rem;
+  background: rgba(0, 0, 0, 0.15);
+
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+#bigcont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h3 {
+  margin: 0 auto;
+  white-space: pre-wrap;
+  font-weight: 400;
+  text-shadow: 0 0 10px #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  width: 80%;
+}
+
+#menubutton {
+  width: 3.5rem;
+  margin: 1rem;
+  position: absolute;
+  margin-left: auto;
+  opacity: 0.5;
+  display: block;
+  z-index: 10;
+  right: 0;
+  filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5))
+    drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5));
+  transition: 0.3s ease;
+}
+.rocket,
+#menubutton:hover {
+  opacity: 1 !important;
+  width: 4rem !important;
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6))
+    drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6)) !important;
+}
+#menubutton:hover {
+  cursor: pointer;
+}
+
+aside img {
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6))
+    drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.8)) !important;
+  position: absolute;
+}
+aside img:last-child {
+  filter: none !important;
+  position: absolute;
+  height: 100vh;
+  right: -8px;
+  top: 0;
+}
+
+.base-flex {
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+.base-flex div {
+  padding: 0 3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.fright {
+  flex-direction: row-reverse;
+}
+.fright div {
+  text-align: right;
+}
+.base-flex img {
+  flex-shrink: 0;
+}
+.satellite img:nth-of-type(1) {
+  order: 0;
+}
+.satellite div,
+.moon {
+  order: 1;
+  font-size: 0.9rem;
+  padding: 0;
+  text-align: center;
+}
+.moon {
+  text-align: left;
+}
+.satellite img:nth-of-type(2) {
+  order: 2;
+}
+.satellite img {
+  margin: 0 2.5rem;
+  height: 15vw;
+}
+.satellite,
+.moon {
+  margin: 5rem 0rem 15rem 0rem;
+}
+
+#mercury {
+  width: 26vw;
+  margin: 0 0 0 -13vw;
+}
+#venus {
+  width: 36vw;
+  margin: 0 -18vw 0 0;
+}
+#earth {
+  width: 36vw;
+  margin: 0 0 0 -18vw;
+}
+#mars {
+  width: 30vw;
+  margin: 0 -15vw 0 0;
+}
+#moon {
+  width: 22vw !important;
+  margin: 0 0 0 2.5rem;
+}
+#jupiter {
+  width: 44vw;
+  height: auto;
+  margin: 0 0 0 -25vw;
+}
+#saturn {
+  width: 60vw;
+  margin: 0 -30vw 0 0;
+}
+#uranus {
+  width: 44vw;
+  margin: 0 0 0 -22vw;
+}
+#neptune {
+  width: 44vw;
+  margin: 0 -22vw 0 0;
+}
+
+h4 {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin-bottom: 2rem;
+}
+h5 {
+  font-size: 1.7rem;
+  letter-spacing: 7px;
+  margin-bottom: 2rem;
+}
+
+nav {
+  margin: 0 auto;
+  color: white;
+  position: sticky;
+  bottom: 0;
+  margin-bottom: 2rem;
+  display: table;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+nav img {
+  height: 2rem;
+  margin: 0 0.7rem;
+  opacity: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+nav img:hover {
+  animation: 5s linear 0s normal none infinite running rot, opacity 0s;
+  opacity: 100%;
+}
+
+.current-theme {
+  opacity: 100%;
+}
+
+#rect {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 0;
+  backdrop-filter: blur(4px);
+  display: none;
+  opacity: 0;
+}
+
+#rect.is-visible {
+  display: block;
+  animation: fadeInFromNone 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#rect.is-hidden {
+  animation: fadeOutFromBlock 0.5s ease-in-out;
+}
+
+aside h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 10px;
+}
+
+.listmenu a {
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.footer_menu p {
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0.1rem;
+}
+
+.listmenu {
+  margin-bottom: 2rem;
+}
+
+.listmenu li {
+  margin: 1rem 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#patternsright {
+  right: 0;
+  width: 35%;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+}
+#patternstop {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 1.5rem;
+  width: 90%;
+  text-align: center;
+}
+#patternsbottom {
+  left: 0;
+  width: 86%;
+  bottom: 53vh;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.listmenu a:hover {
+  padding-left: 0.9rem;
+}
+
+aside {
+  padding: 25vh 65px;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.02);
+  height: 100vh;
+  top: 0;
+  z-index: 100;
+  left: 0;
+  backdrop-filter: blur(6px);
+  left: -345px;
+  transition: all 1s ease;
+  box-shadow: -50px 0px 100px rgba(255, 255, 255, 0.3) inset;
+  font-family: "Lemon Tuesday";
+  text-shadow: 0 0 7px rgb(255 255 255);
+}
+.asideyes {
+  left: 0;
+}
+
+.noscroll {
+  overflow-y: hidden;
+}
+
+section {
+  margin: 10rem 0;
+}
+
+@media (max-width: 950px) {
+  .satellite {
+    display: inline !important;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+  }
+
+  .satellite img {
+    width: 34vw;
+    height: auto;
+  }
+
+  .satellite img:nth-of-type(1),
+  .satellite img:nth-of-type(2) {
+    margin: 0 auto !important;
+    display: block;
+  }
+
+  .satellite img:nth-of-type(1) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 28vw;
+    padding-top: 5vw;
+    padding-right: 17vw;
+  }
+
+  .satellite img:nth-of-type(2) {
+    padding-left: 20vw;
+  }
+
+  .base-flex {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .base-flex div {
+    padding: 0 3rem !important;
+    margin: 0 1rem !important;
+  }
+
+  .base-flex div {
+    text-align: center;
+  }
+
+  .base-flex img {
+    margin: 2rem auto 4rem auto !important;
+  }
+
+  h4,
+  h5 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0px;
+    margin-bottom: 2rem !important;
+  }
+  .satellite div {
+    margin-bottom: 2rem !important ;
+  }
+}
+
+.footerlogo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: gray;
+  letter-spacing: 10px;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+}
+footer {
+  background: #000;
+
+  padding: 30px 0px;
+
+  text-align: center;
+}
+
+footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+footer a {
+  cursor: pointer;
+}
+footer .row a,
+footer a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+footer .row a:hover {
+  color: #fff;
+}
+
+footer .row ul {
+  width: 100%;
+}
+
+footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+section:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+div:last-of-type {
+  padding-bottom: 0rem !important;
+  margin-bottom: 2rem !important;
+}
+
+@media (max-width: 720px) {
+  footer {
+    text-align: left;
+    padding: 5%;
+  }
+  footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 840px) {
+  h3 {
+    white-space: normal;
+  }
+}
+@media (max-width: 768px) {
+  #bigcont img {
+    width: 70%;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  h2:hover {
+    padding: 0.8rem 0.9rem;
+  }
+
+  #menubutton {
+    width: 80px;
+  }
+
+  #menubutton:hover {
+    width: 90px !important;
+  }
+}
+@media (max-height: 675px) {
+  aside img {
+    display: none;
+  }
+
+  aside img:last-child {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  #menubutton {
+    width: 80px;
+    margin-left: 7.5%;
+    left: 0;
+    z-index: 101;
+  }
+
+  .rocket {
+    width: 90px !important;
+  }
+
+  #menubutton:hover {
+    width: 90px !important;
+  }
+
+  aside {
+    padding: 25vh 50px;
+
+    backdrop-filter: blur(6px);
+    left: -400px;
+  }
+
+  aside img {
+    display: none;
+  }
+
+  aside img:last-child {
+    display: block;
+  }
+
+  aside h1 {
+    font-size: 2.3rem;
+  }
+
+  .listmenu li {
+    margin: 0.4rem 0;
+  }
+
+  .listmenu a {
+    font-size: 1.3rem;
+  }
+
+  .footer_menu p {
+    font-size: 1rem;
+  }
+
+  #patternstop {
+    height: auto;
+    top: 1rem;
+  }
+
+  #patternsbottom {
+    margin-top: 1.5rem;
+  }
+
+  html {
+    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (600 - 320)));
+  }
+}
+@media (max-height: 560px) {
+  nav {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  #bigcont img {
+    width: 85%;
+  }
+
+  h3 {
+    width: 85%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutFromBlock {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

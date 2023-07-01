@@ -88,7 +88,7 @@ function Menu() {
     const rect = document.getElementById("rect");
   
     button.addEventListener("click", () => {
-      toggleTwoClasses(rect, "is-visible", "is-hidden", 2000);
+      toggleTwoClasses(rect, "is-visible", "is-hidden", 1000);
     });
   });
   
